@@ -14,7 +14,6 @@ while True:
     if resp == 'n':
         break
 
-numeros.sort()
 pares.sort()
 impares.sort()
 
