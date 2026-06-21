@@ -1,20 +1,18 @@
 #Um programa que vai ler cinco valores numericos, e os cadastre em uma lista ja na posição correta de inserção, sem usar o sort
 # No final mostre a lista na tela em ordem, 5, 2, 8, 1, 3
 
-valores = []
-maior = menor = 0
+lista = []
 
-for i in range(5):
-    valor = int(input('Digite um valor: '))
-    if len(valores) == 0:
-        valores.append(valor)
-        print('Adicionando o valor ao final da lista...')
-        maior = valor
-    elif maior > valor:
-        print('Adicionando na posição 0 da lista...')
-        valores.insert(0, valor)
-        menor = valor
-    elif maior < valor:
-        print('Adicionando o valor ao final da lista...')
-        valores.append(valor)
-        maior = valor
+for c in range(5):
+    n = int(input('Digite um valor: '))
+    if c == 0 or n > lista[len(lista)-1]:
+        lista.append(n)
+    else:
+        pos = 0
+        while pos < len(lista):
+            if n <= lista[pos]:
+                lista.insert(pos, n)
+                break
+            pos += 1
+
+print(f'Os valores digitados foram {lista}')
