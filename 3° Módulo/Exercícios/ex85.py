@@ -23,6 +23,6 @@ else:
 if valores[1]:
     print('Os valores impares são (em ordem crescente):')
     for valor in valores[1]:
-        print(f'{valor}')
+        print(valor)
 else:
     print('Não há valores impares')
