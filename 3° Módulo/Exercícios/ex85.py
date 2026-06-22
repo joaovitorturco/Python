@@ -1,6 +1,11 @@
+#O usuário vai digitar sete valores, vai ser colocados em uma lista composta, as duas sublistas vão ser organizadas em ordem crescente
+#depois serão exibidas
+
+
+# Criando uma lista com duas listas
 valores = [[], []]
 
-for c in range(3):
+for c in range(7):
     n = int(input('Digite um valor: '))
 
     if n % 2 == 0:
@@ -8,6 +13,7 @@ for c in range(3):
     else:
         valores[1].append(n)
 
+# Organizando as duas listas
 valores[0].sort()
 valores[1].sort()
 
